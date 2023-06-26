@@ -1,49 +1,6 @@
 import '../../config/constants/assets.dart';
 import '../models/view_model/topic_selection_model.dart';
 
-// class Topics {
-//   static List<TopicSelectionModel> getAllTopics() {
-//     return [
-//       TopicSelectionModel(
-//         title: "Linux",
-//         imgUrl: AppImages.linuxPicture,
-//         isSelected: true,
-//       ),
-//       TopicSelectionModel(
-//         title: "Bash",
-//         imgUrl: AppImages.githubPicture,
-//         isSelected: true,
-//       ),
-//       TopicSelectionModel(
-//         title: "Docker",
-//         imgUrl: AppImages.dockerPicture,
-//         isSelected: true,
-//       ),
-//       TopicSelectionModel(
-//         title: "SQL",
-//         imgUrl: AppImages.sqlPicture,
-//         isSelected: true,
-//       ),
-//       TopicSelectionModel(
-//         title: "CMS",
-//         imgUrl: AppImages.cmsPicture,
-//         isSelected: true,
-//       ),
-//       TopicSelectionModel(
-//         title: "Code",
-//         imgUrl: AppImages.codingPicture,
-//         isSelected: true,
-//       ),
-//       TopicSelectionModel(
-//         title: "DevOps",
-//         imgUrl: AppImages.devopsPicture,
-//         isSelected: true,
-//       ),
-//     ];
-//   }
-// }
-
-
 class Topics {
   static List<TopicSelectionModel> getAllTopics() {
     return [

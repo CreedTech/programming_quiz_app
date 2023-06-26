@@ -7,16 +7,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(
-      builder: (context, orientation, deviceType) {
-        return MaterialApp(
-          navigatorKey: NavigationService.navigationKey,
-          debugShowCheckedModeBanner: false,
-          title: 'Lazy Programming Quiz',
-          useInheritedMediaQuery: true,
-          initialRoute: NavigationRoutes.splash,
-          onGenerateRoute: generateRoute,
-        );
-      });
+    return Sizer(builder: (context, orientation, deviceType) {
+      return MaterialApp(
+        navigatorKey: NavigationService.navigationKey,
+        debugShowCheckedModeBanner: false,
+        title: 'Lazy Programming Quiz',
+        useInheritedMediaQuery: true,
+        initialRoute: NavigationRoutes.splash,
+        onGenerateRoute: generateRoute,
+      );
+    });
   }
 }

@@ -23,29 +23,27 @@ void main() async {
     statusBarColor: AppPalette.transparentColor,
   ));
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-    overlays: [SystemUiOverlay.top]
-  );
+      overlays: [SystemUiOverlay.top]);
   SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]
-  ).then((_) {
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
     runApp(
       MultiBlocProvider(
         providers: [
-          BlocProvider(create: (_) => getIt.get<CounterCubit>(),)
+          BlocProvider(
+            create: (_) => getIt.get<CounterCubit>(),
+          )
         ],
         child: MultiProvider(
-            providers: [
-              Provider(create: (_) => getIt.get<NavigationService>()),
-              Provider(create: (_) => getIt.get<ServerRepository>()),
-              Provider(create: (_) => getIt.get<SharedPreferencesStore>()),
-              ChangeNotifierProvider(create: (_) => getIt.get<QuizRepository>()),
-              Provider(create: (_) => getIt.get<ScoreStoreRepository>()),
-            ],
-        child: const MyApp(),
-      ),
+          providers: [
+            Provider(create: (_) => getIt.get<NavigationService>()),
+            Provider(create: (_) => getIt.get<ServerRepository>()),
+            Provider(create: (_) => getIt.get<SharedPreferencesStore>()),
+            ChangeNotifierProvider(create: (_) => getIt.get<QuizRepository>()),
+            Provider(create: (_) => getIt.get<ScoreStoreRepository>()),
+          ],
+          child: const MyApp(),
+        ),
       ),
     );
   });
 }
-
-
